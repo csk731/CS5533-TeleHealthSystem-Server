@@ -1,0 +1,193 @@
+2024-03-11T09:33:49.731-05:00  INFO 17163 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 17163 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T09:33:49.731-05:00 DEBUG 17163 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T09:33:49.731-05:00  INFO 17163 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T09:33:49.868-05:00  INFO 17163 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T09:33:49.919-05:00  WARN 17163 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T09:33:49.934-05:00  INFO 17163 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.226 seconds (process running for 2089.338)
+2024-03-11T09:33:54.882-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 22794 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T09:33:54.883-05:00 DEBUG 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T09:33:54.883-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T09:33:55.481-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T09:33:55.629-05:00  WARN 22794 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T09:33:55.648-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.963 seconds (process running for 1.34)
+2024-03-11T10:00:37.386-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 22794 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T10:00:37.389-05:00 DEBUG 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T10:00:37.389-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T10:00:37.716-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T10:00:37.717-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T10:00:37.718-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@7b406fec
+2024-03-11T10:00:37.723-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 13372793920959866153015778330528419462971361821117899642313583111497213226857
+  public y coord: 101289618071807460104187733745239587530332435586864402661117339536394857439865
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T10:00:37.808-05:00  WARN 22794 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T10:00:37.817-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.48 seconds (process running for 1603.544)
+2024-03-11T10:00:39.285-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 22794 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T10:00:39.285-05:00 DEBUG 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T10:00:39.285-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T10:00:39.360-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T10:00:39.361-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T10:00:39.361-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@d0629f66
+2024-03-11T10:00:39.362-05:00  INFO 22794 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 95987881945651027179851074439960582209462266725514525263449663005514584337253
+  public y coord: 11271135253714777633890170778296876600462586274065908233961296309634993164747
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T10:00:39.384-05:00  WARN 22794 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T10:00:39.390-05:00  INFO 22794 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.117 seconds (process running for 1605.116)
+2024-03-11T10:02:55.070-05:00  INFO 23334 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 23334 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T10:02:55.071-05:00 DEBUG 23334 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T10:02:55.071-05:00  INFO 23334 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T10:02:55.690-05:00  INFO 23334 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T10:02:55.698-05:00  INFO 23334 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T10:02:55.698-05:00  INFO 23334 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@757a8647
+2024-03-11T10:02:55.699-05:00  INFO 23334 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 95982573438184127063347681522399415902159017941916146418311893836206710259583
+  public y coord: 42049949725872178810992767762509822701819952032330622557263120075278754616507
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T10:02:55.805-05:00  WARN 23334 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T10:02:55.824-05:00  INFO 23334 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.969 seconds (process running for 1.299)
+2024-03-11T10:03:39.019-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 23347 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T10:03:39.019-05:00 DEBUG 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T10:03:39.020-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T10:03:39.621-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T10:03:39.628-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T10:03:39.628-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@1c8014a8
+2024-03-11T10:03:39.630-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 11502713085088200192431153160047042846687367809021792137561000100326805284858
+  public y coord: 40823572903667743244779929362673591353707187508465563594108642348987940390125
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T10:03:39.745-05:00  WARN 23347 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T10:03:39.763-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 1.026 seconds (process running for 1.285)
+2024-03-11T10:03:43.519-05:00  INFO 23347 --- [http-nio-8080-exec-1] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T10:03:43.519-05:00  INFO 23347 --- [http-nio-8080-exec-1] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T10:03:54.935-05:00  INFO 23347 --- [http-nio-8080-exec-3] d.c.t.service.TelehealthServerService    : Decrypting data using ChaCha20-Poly1305
+2024-03-11T10:03:54.946-05:00  INFO 23347 --- [http-nio-8080-exec-3] d.c.t.service.TelehealthServerService    : Verifying data integrity using SHA-3
+2024-03-11T10:03:54.946-05:00  INFO 23347 --- [http-nio-8080-exec-3] d.c.t.service.TelehealthServerService    : Recalculating hash using SHA-3
+2024-03-11T10:04:19.948-05:00  INFO 23347 --- [http-nio-8080-exec-5] d.c.t.c.TelehealthServerController       : Received request from user to send encrypted message to server
+2024-03-11T10:04:19.950-05:00 DEBUG 23347 --- [http-nio-8080-exec-5] d.c.t.service.TelehealthServerService    : Encrypting message using derived key and sending to client
+2024-03-11T10:04:19.950-05:00  INFO 23347 --- [http-nio-8080-exec-5] d.c.t.service.TelehealthServerService    : Hashing message using SHA-3
+2024-03-11T10:04:19.951-05:00  INFO 23347 --- [http-nio-8080-exec-5] d.c.t.service.TelehealthServerService    : Encrypting the combined message using ChaCha20-Poly1305
+2024-03-11T10:04:19.959-05:00  INFO 23347 --- [http-nio-8080-exec-5] d.c.t.service.TelehealthServerService    : Sending encrypted message to client
+2024-03-11T10:05:22.589-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 23347 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T10:05:22.590-05:00 DEBUG 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T10:05:22.590-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T10:05:22.704-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T10:05:22.705-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T10:05:22.706-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@14c0bf47
+2024-03-11T10:05:22.706-05:00  INFO 23347 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 52212109614371549985133908685518351373802724526909006934685990155448455967385
+  public y coord: 2299741642831279520477553857791401329702316091225158809774584690665777243988
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T10:05:22.733-05:00  WARN 23347 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2024-03-11T10:05:22.739-05:00  INFO 23347 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.17 seconds (process running for 104.263)
+2024-03-11T12:08:24.157-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24556 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:08:24.158-05:00 DEBUG 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:08:24.159-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:08:24.782-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:08:24.789-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:08:24.789-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@67772599
+2024-03-11T12:08:24.790-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 40966187824155085542250460658600203559198752060379782195143175119834662196107
+  public y coord: 88900167595911981401099011607979596346251037076404697127329516164157846498661
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:08:24.911-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.947 seconds (process running for 1.447)
+2024-03-11T12:08:31.077-05:00  INFO 24556 --- [http-nio-8080-exec-1] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:08:31.077-05:00  INFO 24556 --- [http-nio-8080-exec-1] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:10:26.172-05:00  INFO 24556 --- [http-nio-8080-exec-4] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:10:26.172-05:00  INFO 24556 --- [http-nio-8080-exec-4] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:10:39.635-05:00  INFO 24556 --- [http-nio-8080-exec-6] d.c.t.service.TelehealthServerService    : Decrypting data using ChaCha20-Poly1305
+2024-03-11T12:10:39.649-05:00  INFO 24556 --- [http-nio-8080-exec-6] d.c.t.service.TelehealthServerService    : Verifying data integrity using SHA-3
+2024-03-11T12:10:39.649-05:00  INFO 24556 --- [http-nio-8080-exec-6] d.c.t.service.TelehealthServerService    : Recalculating hash using SHA-3
+2024-03-11T12:11:53.582-05:00  INFO 24556 --- [http-nio-8080-exec-8] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:11:53.583-05:00  INFO 24556 --- [http-nio-8080-exec-8] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:11:55.251-05:00  INFO 24556 --- [http-nio-8080-exec-10] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:11:55.252-05:00  INFO 24556 --- [http-nio-8080-exec-10] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:16:48.931-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24556 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:16:48.932-05:00 DEBUG 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:16:48.932-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:16:49.464-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:16:49.468-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:16:49.490-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@c812b807
+2024-03-11T12:16:49.491-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 81659028536374710137998462917596589938675633575147675146864392018667812434458
+  public y coord: 9802229216263920393544834215076818265276046720635996255123854177528506386533
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:16:49.630-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.721 seconds (process running for 506.178)
+2024-03-11T12:16:51.085-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24556 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:16:51.086-05:00 DEBUG 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:16:51.086-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:16:51.213-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:16:51.214-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:16:51.215-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@e1bdad50
+2024-03-11T12:16:51.215-05:00  INFO 24556 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 19036529045472772035673533692836544448966985153650501254100845876961104139156
+  public y coord: 53530564972857897900012197408733256767744429272308937012428877900428060119066
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:16:51.252-05:00  INFO 24556 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.181 seconds (process running for 507.801)
+2024-03-11T12:18:13.773-05:00  INFO 24726 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24726 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:18:13.774-05:00  INFO 24726 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:18:13.793-05:00  INFO 24726 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-11T12:18:13.793-05:00  INFO 24726 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-11T12:18:14.249-05:00  INFO 24726 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-03-11T12:18:14.254-05:00  INFO 24726 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-03-11T12:18:14.255-05:00  INFO 24726 --- [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-03-11T12:18:14.276-05:00  INFO 24726 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-03-11T12:18:14.276-05:00  INFO 24726 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 483 ms
+2024-03-11T12:18:14.397-05:00  INFO 24726 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:18:14.404-05:00  INFO 24726 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:18:14.405-05:00  INFO 24726 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@f5cb735
+2024-03-11T12:18:14.406-05:00  INFO 24726 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 21927863497376611985466973998419558122862639620512751389934826111404138403910
+  public y coord: 107681292406906784525875463229144752274537746818003443721501726463308007119747
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:18:14.523-05:00  INFO 24726 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2024-03-11T12:18:14.539-05:00  INFO 24726 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-03-11T12:18:14.544-05:00  INFO 24726 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.957 seconds (process running for 1.353)
+2024-03-11T12:18:40.439-05:00  INFO 24726 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-11T12:18:40.441-05:00  INFO 24726 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-03-11T12:18:40.445-05:00  INFO 24726 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2024-03-11T12:18:40.472-05:00  INFO 24726 --- [http-nio-8080-exec-1] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:18:40.473-05:00  INFO 24726 --- [http-nio-8080-exec-1] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:19:17.507-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24739 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:19:17.507-05:00 DEBUG 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:19:17.508-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:19:18.162-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:19:18.168-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:19:18.168-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@fb56dd65
+2024-03-11T12:19:18.169-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 113757973558149387010314144640433675172224479390781849393631008591862207709292
+  public y coord: 25183640953220866710500133348052204503649969726411680132355866346008700069882
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:19:18.285-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 1.027 seconds (process running for 1.412)
+2024-03-11T12:20:20.762-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24739 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:20:20.762-05:00 DEBUG 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:20:20.762-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:20:20.848-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:20:20.849-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:20:20.849-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@eea49c69
+2024-03-11T12:20:20.849-05:00  INFO 24739 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 89541266985247970341616102289160876287142310146496030098656912970143714029459
+  public y coord: 105824036686682550977817977380046456727890608252630930832283069036614028606890
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:20:20.889-05:00  INFO 24739 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.139 seconds (process running for 64.018)
+2024-03-11T12:23:27.829-05:00  INFO 24808 --- [restartedMain] d.c.t.TelehealthServerApplication        : Starting TelehealthServerApplication using Java 17.0.8 with PID 24808 (/Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer/target/classes started by chaitanyaallu in /Users/chaitanyaallu/Desktop/Cryptography Project/TeleHealthServer)
+2024-03-11T12:23:27.829-05:00 DEBUG 24808 --- [restartedMain] d.c.t.TelehealthServerApplication        : Running with Spring Boot v3.2.3, Spring v6.1.4
+2024-03-11T12:23:27.830-05:00  INFO 24808 --- [restartedMain] d.c.t.TelehealthServerApplication        : No active profile set, falling back to 1 default profile: "default"
+2024-03-11T12:23:28.406-05:00  INFO 24808 --- [restartedMain] d.c.t.service.TelehealthServerService    : Initializing ECC key pair for the server.
+2024-03-11T12:23:28.412-05:00  INFO 24808 --- [restartedMain] d.c.t.service.TelehealthServerService    : Generated ECC key pair for the server
+2024-03-11T12:23:28.412-05:00  INFO 24808 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server private key: sun.security.ec.ECPrivateKeyImpl@479c17c1
+2024-03-11T12:23:28.413-05:00  INFO 24808 --- [restartedMain] d.c.t.service.TelehealthServerService    : Server public key: Sun EC public key, 256 bits
+  public x coord: 93513583890924023084919408796662274847427089055506123180351803545642581745394
+  public y coord: 29253494903929054712119341933413743525498669834541535084854643338640852708875
+  parameters: secp256r1 [NIST P-256,X9.62 prime256v1] (1.2.840.10045.3.1.7)
+2024-03-11T12:23:28.529-05:00  INFO 24808 --- [restartedMain] d.c.t.TelehealthServerApplication        : Started TelehealthServerApplication in 0.932 seconds (process running for 1.191)
+2024-03-11T12:23:35.749-05:00  INFO 24808 --- [http-nio-8080-exec-1] d.c.t.c.TelehealthServerController       : Received client public key
+2024-03-11T12:23:35.750-05:00  INFO 24808 --- [http-nio-8080-exec-1] d.c.t.service.TelehealthServerService    : Setting client public key
+2024-03-11T12:25:11.054-05:00  INFO 24808 --- [http-nio-8080-exec-4] d.c.t.service.TelehealthServerService    : Decrypting data using ChaCha20-Poly1305
+2024-03-11T12:25:11.061-05:00  INFO 24808 --- [http-nio-8080-exec-4] d.c.t.service.TelehealthServerService    : Verifying data integrity using SHA-3
+2024-03-11T12:25:11.061-05:00  INFO 24808 --- [http-nio-8080-exec-4] d.c.t.service.TelehealthServerService    : Recalculating hash using SHA-3
+2024-03-11T12:29:07.573-05:00  INFO 24808 --- [http-nio-8080-exec-7] d.c.t.c.TelehealthServerController       : Received request from user to send encrypted message to server
+2024-03-11T12:29:07.575-05:00 DEBUG 24808 --- [http-nio-8080-exec-7] d.c.t.service.TelehealthServerService    : Encrypting message using derived key and sending to client
+2024-03-11T12:29:07.575-05:00  INFO 24808 --- [http-nio-8080-exec-7] d.c.t.service.TelehealthServerService    : Hashing message using SHA-3
+2024-03-11T12:29:07.576-05:00  INFO 24808 --- [http-nio-8080-exec-7] d.c.t.service.TelehealthServerService    : Encrypting the combined message using ChaCha20-Poly1305
+2024-03-11T12:29:07.599-05:00  INFO 24808 --- [http-nio-8080-exec-7] d.c.t.service.TelehealthServerService    : Sending encrypted message to client
