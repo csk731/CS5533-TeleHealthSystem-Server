@@ -3,14 +3,20 @@ package dev.chaitanyaallu.telehealthserver.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import dev.chaitanyaallu.telehealthserver.service.TelehealthServerService;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Paths;
 import java.util.Base64;
+import java.util.Objects;
 import java.util.logging.Logger;
 
 @RestController
@@ -42,6 +48,52 @@ public class TelehealthServerController {
         } catch (Exception e) {
             e.printStackTrace();
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to retrieve server public key");
+        }
+    }
+
+    @PostMapping("/receiveFile")
+    public ResponseEntity<String> receiveFile(@RequestParam("file") MultipartFile file, @RequestParam("originalFilename") String originalFilename) {
+        String directoryPath = "received_files";
+        Path directory = Paths.get(directoryPath);
+
+        try {
+            // Ensure the directory exists
+            if (!Files.exists(directory)) {
+                Files.createDirectories(directory); // Create the directory if it does not exist
+            }
+
+            // Save the encrypted file
+            Path encryptedFilePath = directory.resolve(Objects.requireNonNull(originalFilename));
+            file.transferTo(encryptedFilePath);
+
+            // Decrypt the file
+            Path decryptedFilePath = directory.resolve(originalFilename.replace(".enc", ""));
+            cryptographyService.decryptReceivedFile(encryptedFilePath);
+
+            // After decryption, handle the decrypted file as needed
+            System.out.println("Decrypted file saved: " + decryptedFilePath);
+
+            return ResponseEntity.ok("File received and decrypted successfully: " + decryptedFilePath);
+        } catch (IOException e) {
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body("Failed to receive and decrypt file: " + e.getMessage());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body("Unexpected error during decryption: " + e.getMessage());
+        }
+    }
+
+    @PostMapping("/uploadFile")
+    public ResponseEntity<?> uploadFile(@RequestParam("file") MultipartFile file) {
+        try {
+            Path tempFile = Files.createTempFile(null, null);
+            file.transferTo(tempFile.toFile());
+            // Encrypt and send file
+            String encryptedFilePath = cryptographyService.encryptAndSendFile(tempFile, file.getOriginalFilename());
+            return ResponseEntity.ok().body("File encrypted and sent successfully: " + encryptedFilePath);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ResponseEntity.internalServerError().body("Failed to encrypt and send file: " + e.getMessage());
         }
     }
 

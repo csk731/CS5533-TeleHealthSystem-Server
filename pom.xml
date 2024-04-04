@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>dev.chaitanyaallu</groupId>
-    <artifactId>Cryptography</artifactId>
+    <artifactId>TeleHealthServer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>Cryptography</name>
     <description>Cryptography</description>

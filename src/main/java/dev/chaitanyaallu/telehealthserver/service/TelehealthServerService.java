@@ -6,11 +6,12 @@ import jakarta.annotation.PostConstruct;
 import org.bouncycastle.crypto.modes.ChaCha20Poly1305;
 import org.bouncycastle.crypto.params.KeyParameter;
 import org.bouncycastle.crypto.params.ParametersWithIV;
-import org.bouncycastle.jcajce.provider.digest.SHA3;
-import org.bouncycastle.util.Arrays;
+
+import java.util.Arrays;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
@@ -19,10 +20,15 @@ import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.security.*;
 import java.util.Base64;
 
 import org.bouncycastle.jce.provider.BouncyCastleProvider;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 @Service
@@ -67,32 +73,6 @@ public class TelehealthServerService {
         return ECCKeyUtil.encodePublicKey(keyPair.getPublic());
     }
 
-//    public byte[] generateECCKey() throws NoSuchAlgorithmException, NoSuchProviderException {
-//        KeyPairGenerator keyGen = KeyPairGenerator.getInstance("EC", "BC");
-//        keyGen.initialize(256);
-//        KeyPair pair = keyGen.generateKeyPair();
-//        return pair.getPublic().getEncoded();
-//    }
-
-//    public byte[] encryptData(byte[] plaintext, byte[] key) throws Exception {
-//        SecureRandom random = new SecureRandom();
-//        byte[] nonce = new byte[12];
-//        random.nextBytes(nonce);
-//
-//        ChaCha20Poly1305 cipher = new ChaCha20Poly1305();
-//        cipher.init(true, new ParametersWithIV(new KeyParameter(key), nonce));
-//
-//        byte[] encryptedData = new byte[cipher.getOutputSize(plaintext.length)];
-//        int len = cipher.processBytes(plaintext, 0, plaintext.length, encryptedData, 0);
-//        cipher.doFinal(encryptedData, len);
-//
-//        byte[] combinedMessage = new byte[nonce.length + encryptedData.length];
-//        System.arraycopy(nonce, 0, combinedMessage, 0, nonce.length);
-//        System.arraycopy(encryptedData, 0, combinedMessage, nonce.length, encryptedData.length);
-//
-//        return combinedMessage;
-//    }
-
     public byte[] decryptData(byte[] encryptedData) throws Exception {
         if (this.derivedKey == null) {
             throw new IllegalStateException("Encryption key has not been set.");
@@ -125,6 +105,81 @@ public class TelehealthServerService {
 
         return originalMessage;
     }
+
+    public void decryptReceivedFile(Path encryptedFilePath) throws Exception {
+        if (derivedKey == null) {
+            throw new IllegalStateException("Encryption key has not been set.");
+        }
+
+        byte[] encryptedData = Files.readAllBytes(encryptedFilePath);
+
+        // Extract nonce and decrypt
+        byte[] nonce = Arrays.copyOfRange(encryptedData, 0, 12);
+        byte[] ciphertextAndMac = Arrays.copyOfRange(encryptedData, 12, encryptedData.length);
+        byte[] decryptedData = CryptoUtil.decryptChaCha20(ciphertextAndMac, derivedKey, nonce);
+
+        // Verify hash and extract original file content
+        int hashSize = 32; // For SHA3-256
+        byte[] originalFileBytes = Arrays.copyOfRange(decryptedData, 0, decryptedData.length - hashSize);
+        byte[] originalHash = Arrays.copyOfRange(decryptedData, decryptedData.length - hashSize, decryptedData.length);
+        byte[] recalculatedHash = CryptoUtil.hashUsingSHA3(originalFileBytes);
+        if (!Arrays.equals(originalHash, recalculatedHash)) {
+            throw new SecurityException("File integrity check failed.");
+        }
+
+        // Safer path manipulation
+        Path decryptedFilePath = encryptedFilePath.getParent().resolve(encryptedFilePath.getFileName().toString().replaceAll("\\.enc$", ""));
+        Files.write(decryptedFilePath, originalFileBytes);
+
+    }
+
+    public String encryptAndSendFile(Path filePath, String originalFilename) throws Exception {
+        if (derivedKey == null) {
+            throw new IllegalStateException("Encryption key has not been derived.");
+        }
+
+        // Read file bytes
+        byte[] fileBytes = Files.readAllBytes(filePath);
+
+        // Hash, Encrypt, Combine with nonce
+        byte[] messageHash = CryptoUtil.hashUsingSHA3(fileBytes);
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        outputStream.write(fileBytes);
+        outputStream.write(messageHash);
+        byte[] combinedMessage = outputStream.toByteArray();
+
+        byte[] nonce = CryptoUtil.generateNonce();
+        byte[] encryptedMessage = CryptoUtil.encryptChaCha20(combinedMessage, derivedKey, nonce);
+        byte[] combinedEncryptedMessage = CryptoUtil.combineNonceAndCiphertext(nonce, encryptedMessage);
+
+        // Temporarily write to a file (if needed)
+        Path encryptedFilePath = Files.createTempFile(null, ".enc");
+        Files.write(encryptedFilePath, combinedEncryptedMessage);
+
+        // Prepare and send the encrypted file
+        RestTemplate restTemplate = new RestTemplate();
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.MULTIPART_FORM_DATA);
+
+        MultiValueMap<String, Object> body = new LinkedMultiValueMap<>();
+        body.add("file", new FileSystemResource(encryptedFilePath.toFile()));
+        body.add("originalFilename", originalFilename); // Include original filename as form data
+
+        HttpEntity<MultiValueMap<String, Object>> requestEntity = new HttpEntity<>(body, headers);
+        ResponseEntity<String> response = restTemplate.postForEntity(clientUrl+"/receiveFile", requestEntity, String.class);
+
+        // Check response status and handle errors
+        if (!response.getStatusCode().is2xxSuccessful()) {
+            throw new RuntimeException("Failed to send file: " + response.getBody());
+        }
+
+        // Optionally, delete the temporary file after sending
+        Files.delete(encryptedFilePath);
+
+        // Return response body or handle as needed
+        return response.getBody();
+    }
+
 
 
     public String encryptAndSend(String message) {
